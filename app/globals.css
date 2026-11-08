@@ -1,19 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..800;1,8..60,300..800&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #f9f9f9;
-  --foreground: #111111;
+  /* Official Path School Logo Color Palette */
+  --brand-purple: #6c3696;
+  --brand-purple-hover: #58267d;
+  --brand-purple-dark: #150824;
+  --brand-purple-light: #f7f1fb;
+  --brand-purple-border: #e3d2f2;
+
+  --brand-magenta: #e81b87;
+  --brand-magenta-hover: #c91072;
+  --brand-magenta-light: #fdf2f8;
+  --brand-magenta-border: #fbcfe8;
+
+  /* Theme mappings aligned to brand colors */
+  --pmi-dark: #150824;
+  --pmi-dark-card: #200d36;
+  --pmi-navy: #18092c;
+  --pmi-purple: #6c3696;
+  --pmi-magenta: #e81b87;
+  --pmi-cream: #f9f7fa;
+  --pmi-cream-card: #faf8fc;
+  --pmi-cream-border: #ede4f5;
+  --background: #ffffff;
+  --foreground: #150824;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-purple: var(--brand-purple);
+  --color-brand-purple-hover: var(--brand-purple-hover);
+  --color-brand-purple-dark: var(--brand-purple-dark);
+  --color-brand-purple-light: var(--brand-purple-light);
+  --color-brand-purple-border: var(--brand-purple-border);
+
+  --color-brand-magenta: var(--brand-magenta);
+  --color-brand-magenta-hover: var(--brand-magenta-hover);
+  --color-brand-magenta-light: var(--brand-magenta-light);
+  --color-brand-magenta-border: var(--brand-magenta-border);
+
+  --color-pmi-dark: var(--pmi-dark);
+  --color-pmi-dark-card: var(--pmi-dark-card);
+  --color-pmi-navy: var(--pmi-navy);
+  --color-pmi-purple: var(--pmi-purple);
+  --color-pmi-magenta: var(--pmi-magenta);
+  --color-pmi-cream: var(--pmi-cream);
+  --color-pmi-cream-card: var(--pmi-cream-card);
+  --color-pmi-cream-border: var(--pmi-cream-border);
+  --font-sans: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, Cambria, serif;
+  --font-heading: 'Source Serif 4', Georgia, Cambria, serif;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Utilities for touch devices & swipeable carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Header & Heading typography: Source Serif 4 (matching Y Combinator) */
+.font-heading, .font-serif {
+  font-family: 'Source Serif 4', Georgia, Cambria, 'Times New Roman', serif;
+}
+
+/* Custom scrollbar and utilities for Path School theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f1fb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4c2e6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6c3696;
 }

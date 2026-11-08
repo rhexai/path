@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY || 're_placeholder');
 
 export async function POST(request: Request) {
   try {
@@ -13,7 +13,7 @@ export async function POST(request: Request) {
     }
 
     const { data: resendData, error } = await resend.emails.send({
-      from: 'Futures Academy Events <onboarding@resend.dev>',
+      from: 'Path School Events <onboarding@resend.dev>',
       to: ['bd.scriptlabsdigital@gmail.com'], 
       subject: `New Event Subscriber: ${email}`,
       html: `

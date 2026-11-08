@@ -1,26 +1,22 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#150824",
+};
 
 export const metadata: Metadata = {
-  title: "Futures Academy",
-  description: "Futures Academy - Learn Future Skills. Build Real-World Confidence.",
+  title: "Path School",
+  description: "Path School - Learn Future Skills. Build Real-World Confidence.",
   icons: {
     icon: [
-      { url: '/futures-logo-v2.png' }
+      { url: '/path-icon.png' }
     ],
-    shortcut: '/futures-logo-v2.png',
-    apple: '/futures-logo-v2.png',
+    shortcut: '/path-icon.png',
+    apple: '/path-icon.png',
   },
 };
 
@@ -32,9 +28,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className="h-full antialiased"
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col overflow-x-hidden">{children}</body>
     </html>
   );
 }

@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY || 're_placeholder');
 
 export async function POST(request: Request) {
   try {
@@ -13,12 +13,12 @@ export async function POST(request: Request) {
     }
 
     const { data: resendData, error } = await resend.emails.send({
-      from: 'Futures Academy Newsletter <onboarding@resend.dev>',
+      from: 'Path School Newsletter <onboarding@resend.dev>',
       to: ['bd.scriptlabsdigital@gmail.com'], 
       subject: `New Newsletter Subscriber: ${email}`,
       html: `
         <h1>New Newsletter Subscription</h1>
-        <p>A new user has subscribed to the Futures Academy newsletter.</p>
+        <p>A new user has subscribed to the Path School newsletter.</p>
         <p><strong>Email Address:</strong> ${email}</p>
       `,
     });
