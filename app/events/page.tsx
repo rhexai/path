@@ -46,7 +46,7 @@ const EVENTS_DATA: EventItem[] = [
     city: 'Accra, GH',
     mode: 'hybrid',
     category: 'Demo Day',
-    image: '/events/demo_day.jpg',
+    image: '/events/path-school-event.jpg',
     shortDesc: 'Standout youth founder teams unveil their AI applications, developer platforms, and hardware prototypes before mentors, angels, and supporters.',
     fullDesc: 'Experience the next generation of builders. Ambitious high school and college founders from Path School will take the stage to demonstrate working software, real-world customer traction, and novel AI systems. Join us in person in Accra or watch the live stream from anywhere in the world.',
     highlights: [
@@ -75,7 +75,7 @@ const EVENTS_DATA: EventItem[] = [
     city: 'Accra, GH',
     mode: 'in-person',
     category: 'Bootcamp',
-    image: '/events/startup_school_taipei.jpg',
+    image: '/events/path-school-event.jpg',
     shortDesc: 'A casual community gathering for Path School students, parents, alumni, and mentors. Connect, share projects, and hear what\'s coming next.',
     fullDesc: 'Join us for the January Path Meetup — a relaxed in-person gathering for the entire Path School community. Whether you are a current student, a parent, an alumni founder, or a mentor, come connect, share what you have been building, and learn what\'s planned for the upcoming batches.',
     highlights: [
@@ -103,7 +103,7 @@ const EVENTS_DATA: EventItem[] = [
     city: 'Accra, GH',
     mode: 'in-person',
     category: 'Campus Tour',
-    image: '/events/campus_autumn.jpg',
+    image: '/events/path-school-event.jpg',
     shortDesc: 'Official orientation for all incoming Path School students and families for the 2026/27 programme year. Meet your batch, mentors, and lead instructors.',
     fullDesc: 'The Path School 26/27 Program Orientation is the official kick-off for all incoming students and their families. Come meet your batch mates, get paired with your lead instructor, receive your first project brief, and understand what the upcoming term will look like. Parents are warmly encouraged to attend.',
     highlights: [
@@ -326,11 +326,11 @@ export default function EventsPage() {
                     className="group py-6 sm:py-7 flex items-center justify-between gap-4 sm:gap-6 cursor-pointer hover:bg-black/[0.02] -mx-3 sm:-mx-4 px-3 sm:px-4 rounded-xl transition-all"
                   >
                     {/* Left: Thumbnail Image */}
-                    <div className="w-28 h-20 sm:w-36 sm:h-24 md:w-40 md:h-24 rounded-lg overflow-hidden shrink-0 bg-gray-100 border border-gray-200/60 shadow-2xs">
+                    <div className="w-28 h-20 sm:w-36 sm:h-24 md:w-40 md:h-24 rounded-lg overflow-hidden shrink-0 bg-white border border-gray-200/80 shadow-2xs flex items-center justify-center p-1.5">
                       <img
                         src={event.image}
                         alt={event.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
 
@@ -374,13 +374,13 @@ export default function EventsPage() {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header Image */}
-            <div className="relative h-48 sm:h-64 w-full bg-gray-900 overflow-hidden shrink-0">
+            <div className="relative h-48 sm:h-64 w-full bg-[#16082a] overflow-hidden shrink-0 flex items-center justify-center p-4">
               <img
                 src={selectedEvent.image}
                 alt={selectedEvent.title}
-                className="w-full h-full object-cover opacity-90"
+                className="w-full h-full object-contain bg-white rounded-lg p-3"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
               
               {/* Close Button */}
               <button
