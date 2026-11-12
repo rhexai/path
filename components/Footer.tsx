@@ -105,50 +105,77 @@ export default function Footer() {
               </Link>
 
               {/* Stay Connected */}
-              <span className="font-bold text-[#16082a] text-xs block mb-2">Stay Connected</span>
+              <span className="font-bold text-[#16082a] text-xs block mb-1">Stay Connected</span>
+              <span className="text-[11px] text-gray-500 block mb-2 font-medium">@visitpathschool</span>
               <div className="flex flex-wrap gap-2">
-                {/* Facebook */}
+                {/* YouTube */}
                 <a 
-                  href="https://facebook.com" 
+                  href="https://youtube.com/@visitpathschool" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  aria-label="Facebook"
+                  aria-label="YouTube @visitpathschool"
                   className="w-7 h-7 bg-[#16082a] text-white rounded-full flex items-center justify-center hover:bg-[#e81b87] transition-colors"
                 >
-                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" fillRule="evenodd" clipRule="evenodd">
+                    <path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77 1.56.42 7.81.42 7.81.42s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77.42-1.56.42-4.81.42-4.81s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z" />
+                  </svg>
                 </a>
 
                 {/* Instagram */}
                 <a 
-                  href="https://instagram.com" 
+                  href="https://instagram.com/visitpathschool" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  aria-label="Instagram"
+                  aria-label="Instagram @visitpathschool"
                   className="w-7 h-7 bg-[#16082a] text-white rounded-full flex items-center justify-center hover:bg-[#e81b87] transition-colors"
                 >
                   <svg className="w-3.5 h-3.5 fill-none stroke-current" strokeWidth="2" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><circle cx="17.5" cy="6.5" r="1"></circle></svg>
                 </a>
 
-                {/* LinkedIn */}
+                {/* X (formerly Twitter) */}
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://x.com/visitpathschool" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  aria-label="LinkedIn"
+                  aria-label="X (Twitter) @visitpathschool"
+                  className="w-7 h-7 bg-[#16082a] text-white rounded-full flex items-center justify-center hover:bg-[#e81b87] transition-colors"
+                >
+                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+
+                {/* LinkedIn */}
+                <a 
+                  href="https://linkedin.com/company/visitpathschool" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="LinkedIn @visitpathschool"
                   className="w-7 h-7 bg-[#16082a] text-white rounded-full flex items-center justify-center hover:bg-[#e81b87] transition-colors"
                 >
                   <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                 </a>
 
-                {/* YouTube */}
+                {/* TikTok */}
                 <a 
-                  href="https://youtube.com" 
+                  href="https://tiktok.com/@visitpathschool" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  aria-label="YouTube"
+                  aria-label="TikTok @visitpathschool"
                   className="w-7 h-7 bg-[#16082a] text-white rounded-full flex items-center justify-center hover:bg-[#e81b87] transition-colors"
                 >
-                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path></svg>
+                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/>
+                  </svg>
+                </a>
+
+                {/* Facebook */}
+                <a 
+                  href="https://facebook.com/visitpathschool" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Facebook @visitpathschool"
+                  className="w-7 h-7 bg-[#16082a] text-white rounded-full flex items-center justify-center hover:bg-[#e81b87] transition-colors"
+                >
+                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                 </a>
               </div>
             </div>
