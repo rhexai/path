@@ -30,7 +30,7 @@ export default function LessonsPage() {
     track: 'AI Programming & Training'
   });
 
-  const paystackAmount = billingPeriod === 'monthly' ? 95000 : 24000; // 95000 pesewas = 950 GHS
+  const paystackAmount = billingPeriod === 'monthly' ? 95000 : 1026000; // 95,000 pesewas (950 GHS) / 1,026,000 pesewas (10,260 GHS)
 
   const toggleFaq = (idx: number) => {
     setOpenFaq(openFaq === idx ? null : idx);
@@ -56,18 +56,21 @@ export default function LessonsPage() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({
+            ...formData,
+            billingPeriod,
+            amount: billingPeriod === 'monthly' ? 'GH₵ 950' : 'GH₵ 10,260',
+          }),
         });
 
-        if (response.ok) {
-          setFormSubmitted(true);
-        } else {
-          console.error('Submission failed');
+        if (!response.ok) {
+          console.warn('Backend enrollment response non-200, continuing to payment');
         }
       } catch (error) {
-        console.error('Error submitting form:', error);
+        console.warn('Error submitting form notification, continuing to payment:', error);
       } finally {
         setIsSubmitting(false);
+        setFormSubmitted(true);
       }
     }
   };
@@ -108,7 +111,7 @@ export default function LessonsPage() {
     },
     {
       question: "How does the monthly and annual subscription work?",
-      answer: "The monthly option is GH₵ 950 per month with cancel-anytime flexibility. The annual option is $240, saving 10% for the full year."
+      answer: "The monthly option is GH₵ 950 per month with cancel-anytime flexibility. The annual option is GH₵ 10,260, saving 10% for the full year."
     },
     {
       question: "Do you offer scholarships or financial aid?",
@@ -238,7 +241,7 @@ export default function LessonsPage() {
                       billingPeriod === 'annual' ? 'bg-[#16140f] text-white shadow-sm' : 'text-gray-500 hover:text-gray-900'
                     }`}
                   >
-                    Annual ($240) <span className="bg-[#6c3696] text-white text-[10px] px-2 py-0.5 rounded-full font-bold">Save 10%</span>
+                    Annual (GH₵ 10,260) <span className="bg-[#6c3696] text-white text-[10px] px-2 py-0.5 rounded-full font-bold">Save 10%</span>
                   </button>
                 </div>
 
@@ -351,7 +354,7 @@ export default function LessonsPage() {
                   Enrollment Submitted!
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6 max-w-sm">
-                  Thank you, <strong>{formData.parentName}</strong>! We have received your request to enroll your child in our <strong>{formData.track}</strong> track. An advisor will reach out to <strong>{formData.email}</strong> shortly with details and next steps. Please click the button below to proceed to payment and complete your subscription.
+                  Thank you, <strong>{formData.parentName}</strong>! We have received your request to enroll your child in our <strong>{formData.track}</strong> track ({billingPeriod === 'monthly' ? 'GH₵ 950 / month' : 'GH₵ 10,260 / year'}). An advisor will reach out to <strong>{formData.email}</strong> shortly with details and next steps. Please click the button below to proceed to payment and complete your subscription.
                 </p>
                 <PaymentButton
                   email={formData.email}
